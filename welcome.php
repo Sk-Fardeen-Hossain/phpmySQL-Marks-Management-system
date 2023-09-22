@@ -12,10 +12,29 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .hero {
+    .background-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
       background-image: url(https://static.theprint.in/wp-content/uploads/2022/05/Students.jpg);
       background-size: cover;
       background-position: center;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Overlay with reduced opacity */
+      z-index: -1;
+    }
+
+    .hero {
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -38,16 +57,17 @@
     }
 
     .navbar-container {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
     }
 
     .navbar {
       padding: 1rem 0;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .navbar ul {
@@ -63,7 +83,7 @@
 
     .navbar a {
       text-decoration: none;
-      color: #fff; /* White font color */
+      color: #fff;
       font-weight: bold;
     }
 
@@ -76,6 +96,8 @@
   </style>
 </head>
 <body>
+  <div class="background-container"></div>
+  <div class="overlay"></div>
   <div class="navbar-container">
     <header class="navbar">
       <ul>

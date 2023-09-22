@@ -1,78 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>College Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <style>
-    .background-container {
-            background-image: url(https://static.theprint.in/wp-content/uploads/2022/05/Students.jpg);
-            opacity: 0.3;
-            background-size: cover;
-            background-position: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Admin Dashboard</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
             height: 100%;
-            z-index: -1;
         }
 
-    .container {
-      text-align: center;
-      color: #fff;
-    }
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* Added to stack the navigation and buttons vertically */
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-    h1 {
-      font-size: 40px;
-      color: black;
-      font-family: "Bebas Neue";
-    }
+        .card {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        }
 
-    h2 {
-      font-size: 100px;
-      font-family: "Bebas Neue";
-      color: black;
-    }
+        .card h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-    .buttons {
-      margin-top: 20px;
-    }
+        .nav-link {
+            display: block;
+            background-color: #0074a8;
+            color: white;
+            padding: 14px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            /* Remove the default link underline */
+            margin-bottom: 10px;
+        }
 
-    .buttons button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #fff;
-      color: #000;
-      border: none;
-      cursor: pointer;
-      margin-right: 10px;
-      border-radius: 30px;
-    }
-    @media (max-width: 768px) {
-      h2 {
-        font-size: 40px;
-      }
-    }
-  </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-    function goToDatabase() {
-      window.location.href = "studentData.php";
-    }
-    function goToNewStudent() {
-      window.location.href = "newStudent.php";
-    }
-  </script>
+        .nav-link:hover {
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-<div class="background-container"></div>
-  <div class="container">
-    <h1>MCKV Institute of Engineering</h1>
-    <h2>Admin Panel</h2>
-    <div class="buttons">
-      <button onclick="goToDatabase()">Student Database</button>
-      <button onclick="goToNewStudent()">Add new Student</button>
+    <div class="container">
+        <div class="card">
+            <h1>Admin Dashboard</h1>
+            <a class="nav-link" href="studentData.php">Student Data</a>
+            <a class="nav-link" href="newStudent.php">New Student</a>
+        </div>
     </div>
-  </div>
 </body>
+
 </html>
