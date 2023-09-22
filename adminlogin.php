@@ -1,81 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <title>Login Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Admin Login</title>
     <style>
-        html,
-        body {
-            display: flex;
-            justify-content: center;
-            font-family: Roboto, Arial, sans-serif;
-            font-size: 15px;
-            padding: 0;
+        html, body {
             margin: 0;
-        }
-
-        .background-container {
-            background-image: url(https://static.theprint.in/wp-content/uploads/2022/05/Students.jpg);
-            opacity: 0.3;
-            background-size: cover;
-            background-position: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
             height: 100%;
-            z-index: -1;
-        }
-
-        form {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            height: 500px;
-            margin-top: 100px;
-        }
-
-        input[type=text] {
-            width: 100%;
-            padding: 16px 8px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #8ebf42;
-            color: white;
-            padding: 14px 0;
-            margin: 190px 0px;
-            border: none;
-            cursor: grabbing;
-            width: 100%;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 18px;
-        }
-
-        button:hover {
-            opacity: 0.8;
-        }
-
-        .formcontainer {
-            text-align: left;
-            margin: 24px 50px 12px;
         }
 
         .container {
-            padding: 16px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
             text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            background-color: #008abc;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .submit-button:hover {
+            background-color: #0074a8;
+        }
+
+        .back-to-home {
+            font-size: 16px;
+            color: #008abc;
+            text-decoration: none;
         }
     </style>
     <?php
@@ -110,29 +104,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($connection);
 
     ?>
-
-
 </head>
-
 <body>
-    <div class="background-container"></div>
-    <div class="formcontainer">
+<div class="container">
+    <div class="card">
         <?php if(isset($errorMessage)){?>
             <p style="color: red;"><?php echo $errorMessage; ?></p>
-
         <?php } ?>
+        <h2>Admin Login</h2>
         <form action="" method="POST">
-            <h1>Admin Login</h1>
-            <hr />
-            <div class="container">
-                <label for="userid"><strong>User Identification number :</strong></label>
-                <input type="text" placeholder="Enter user ID" name="userid" id="userid" required>
-                <label for="password"><strong>Password :</strong></label>
-                <input type="text" placeholder="Enter Password" name="password" id="password" required>
+            <div class="form-group">
+                <label for="userid">User Identification number:</label>
+                <input class="form-control input-field" type="text" placeholder="Enter User ID" name="userid" id="userid" required>
             </div>
-            <button type="submit" name="b1">Login</button>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input class="form-control input-field" type="password" placeholder="Enter Password" name="password" id="password" required>
+            </div>
+            <button class="btn btn-success submit-button" type="submit" name="b1">Login</button>
         </form>
+        <a class="back-to-home" href="welcome.php">Back to Homepage</a>
     </div>
+</div>
 </body>
-
 </html>
