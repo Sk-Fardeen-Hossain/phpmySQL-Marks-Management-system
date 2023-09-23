@@ -3,7 +3,6 @@ require_once('db_config.php');
 
 $reg = $_POST['reg'];
 
-// Assuming you have other fields (e.g., 'Name', 'roll') in your form
 $name = $_POST['name'];
 $roll = $_POST['roll'];
 $de = $_POST['de'];
@@ -13,11 +12,9 @@ $cn = $_POST['cn'];
 $cs = $_POST['cs'];
 $ee = $_POST['ee'];
 
-// Add all fields you want to update in the SET clause except 'marks'
 $query = "UPDATE results SET Name = '$name', roll = '$roll', de = '$de', ac = '$ac', mm = '$mm', cn = '$cn', cs = '$cs', ee = '$ee' WHERE reg = '$reg'";
 
 if (mysqli_query($conn, $query)) {
-    // Fetch the updated record and return it as HTML
     $updatedRecordQuery = "SELECT * FROM results WHERE reg = '$reg'";
     $result = mysqli_query($conn, $updatedRecordQuery);
     $row = mysqli_fetch_assoc($result);

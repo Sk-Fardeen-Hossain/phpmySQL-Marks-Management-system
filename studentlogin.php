@@ -18,7 +18,7 @@
 
         .container {
             display: flex;
-            flex-direction: column; /* Added to stack the form and button vertically */
+            flex-direction: column; 
             align-items: center;
             justify-content: center;
             height: 100vh;

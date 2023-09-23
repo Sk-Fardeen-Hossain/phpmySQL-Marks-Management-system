@@ -30,7 +30,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.7); /* Overlay with reduced opacity */
+      background-color: rgba(0, 0, 0, 0.7); 
       z-index: -1;
     }
 
@@ -105,8 +105,8 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Notice board</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="adminlogin.php">Login</a></li> <!-- Redirect to adminlogin.php -->
-        <li><a href="studentlogin.php">Results</a></li> <!-- Redirect to studentlogin.php -->
+        <li><a href="adminlogin.php">Login</a></li> 
+        <li><a href="studentlogin.php">Results</a></li> 
       </ul>
     </header>
   </div>

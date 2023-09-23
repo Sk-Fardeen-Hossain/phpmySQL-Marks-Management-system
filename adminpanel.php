@@ -19,7 +19,7 @@
         .container {
             display: flex;
             flex-direction: column;
-            /* Added to stack the navigation and buttons vertically */
+        
             align-items: center;
             justify-content: center;
             height: 100vh;
@@ -51,7 +51,7 @@
             font-size: 18px;
             text-align: center;
             text-decoration: none;
-            /* Remove the default link underline */
+    
             margin-bottom: 10px;
         }
 

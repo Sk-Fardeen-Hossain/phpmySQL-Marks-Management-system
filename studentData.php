@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Marks Data</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include Bootstrap CSS and JS files -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
@@ -31,7 +31,8 @@
             margin-bottom: 20px;
         }
 
-        th, td {
+        th,
+        td {
             padding: 10px;
             text-align: left;
             border-bottom: 1px solid #ddd;
@@ -56,6 +57,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Marks Data</h1>
@@ -100,7 +102,7 @@
         </table>
     </div>
 
-    <!-- Bootstrap modal for editing -->
+
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -111,7 +113,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <!-- Edit form -->
+
                     <form id="editForm">
                         <input type="hidden" id="editReg" name="reg">
                         <div class="form-group">
@@ -165,7 +167,9 @@
             $.ajax({
                 type: 'POST',
                 url: 'fetchStudent.php',
-                data: { reg: reg },
+                data: {
+                    reg: reg
+                },
                 success: function(response) {
                     const student = JSON.parse(response);
                     $('#editName').val(student.Name);
@@ -214,4 +218,5 @@
         }
     </script>
 </body>
+
 </html>
