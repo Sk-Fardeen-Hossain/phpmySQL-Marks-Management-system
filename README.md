@@ -1,2 +1,2 @@
 # phpmySQL-Marks-Management-system
-This is a small project I created as training project at CSI, contains application of basic SQL operations like insert, delete, update & select. Also consists of a login verification system. This project maybe rewritten with different technology if any performance enhancement is realized.
+This is a small project I created as training project at CSI, contains application of basic SQL operations like insert, delete, update & select. Also consists of a login verification system. This project maybe rewritten with different technology if any performance enhancement is realized. The project screenshots are shown in the following drive link : https://drive.google.com/drive/folders/1BH-amz-QEoTwl9dqccPBKaInpvLTGmrN?usp=drive_link
